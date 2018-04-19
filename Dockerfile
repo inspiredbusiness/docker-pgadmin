@@ -10,4 +10,5 @@ RUN curl -L "https://github.com/phppgadmin/phppgadmin/archive/REL_5-1-0.tar.gz" 
     rm -rf conf/config.inc.php-dist CREDITS DEVELOPERS FAQ HISTORY INSTALL TODO TRANSLATORS
 WORKDIR /
 
-ADD data /app
+ADD data/config /config
+ADD data/http /app
