@@ -7,7 +7,7 @@ ENV POSTGRESQL_DEFAULT_DB=pg
 
 WORKDIR /app
 
-RUN curl -L "https://github.com/phppgadmin/phppgadmin/releases/download/REL_5-6-0/phpPgAdmin-5.6.0.tar.bz2" | tar --strip-components=1 -x -z && \
+RUN curl -L "https://github.com/phppgadmin/phppgadmin/releases/download/REL_5-6-0/phpPgAdmin-5.6.0.tar.bz2" | tar --strip-components=1 -xj && \
     rm -rf conf/config.inc.php-dist CREDITS DEVELOPERS FAQ HISTORY INSTALL TODO TRANSLATORS
 
 ADD config /config
